@@ -1,6 +1,8 @@
 # Cognitio Plus
 
-Cognitio+ is not just a platform; it's a social enterprise dedicated to reducing barriers to mental health care, including cost, stigma, and geographic isolation. Our mission is to offer accessible, affordable, and culturally relevant services both online and through integrating mental health and substance abuse services to the primary health care. We believe that mental health is a basic human right, and we are committed to embedding dignity, inclusivity, and empowerment into every service we offer
+Cognitio+ is not just a platform; it's a social enterprise dedicated to reducing barriers to mental health care, including cost, stigma, and geographic isolation. Our mission is to offer accessible, affordable, and culturally relevant services both online and through integrating mental health and substance abuse services to the primary health care. 
+
+Cognitio+ is a mental health technology and services platform dedicated to making mental health and psychosocial rehabilitation services accessible, culturally sensitive, and proactive. Leveraging AI, behavioral science, and public health frameworks, Cognitio+ offers a suite of digital and community-based solutions designed to address the urgent and evolving mental health and substance use challenges in the Philippines.
 
 ## 🌐 Website
 
@@ -12,9 +14,16 @@ Visit the live site at: [Cognitio+](https://cognitio-plus.com)
 
 **Digital Mental Health Tools**
 Cognitio+ offers a suite of mobile-first, AI-enhanced tools designed to improve mental health awareness, early detection, and self-management. These tools include:
-Resilience Self-Assessment App: Users can assess their psychological resilience through gamified, culturally-tailored questionnaires
-Emotional Wellness Tracker: A digital journal and mood tracker powered by NLP (Natural Language Processing) that detects emotional trends and suggests wellness tips 1.
-Behavior Design Modules: Interactive micro-courses on stress management, emotional regulation, sleep hygiene, and substance use prevention
+
+Resilience Navigator: Users can assess their psychological resilience through gamified, culturally-tailored questionnaires
+
+Emotional Wellness Tracker: A digital journal and mood tracker powered by NLP (Natural Language Processing) that detects emotional trends and suggests wellness tips
+
+Resilient Habit Designer: Interactive micro-courses on stress management, emotional regulation, sleep hygiene, and substance use prevention
+
+Stress Manager: 
+
+Oasis 
 
 **Teletherapy and Online Counseling**
 Cognitio+ provides a comprehensive digital counseling program offering:
