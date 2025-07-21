@@ -1,118 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta name="description" content="Customize your mental health plan with Cognitio+">
-<meta property="og:title" content="Cognitio+ – Mental Health Service Customization">
-<meta property="og:description" content="Build your personalized mental health plan.">
-<meta property="og:image" content="/images/og-image.jpg">
-<meta property="og:url" content="https://cognitio-plus.com ">
-<link rel="canonical" href="https://cognitio-plus.com " />
-  <!-- Hero Animation -->
-<lottie-player 
-  src="/animations/mental-health.json" 
-  background="transparent" 
-  speed="1" 
-  style="width: 100%; max-height: 400px;" 
-  loop 
-  autoplay>
-</lottie-player>
-  <script src="https://unpkg.com/ @lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  <title>Cognitio+</title>
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-xC7p+uaWcQzjXJtQeUQNqj4s1bR7mPqvRPn1K9V+6wbi9JifaFQpBz9vZ/2CQf0uR6n6QyHOCPJp1yK9hGmQag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- PWA Service Worker Registration -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('service-worker.js')
-          .then(reg => console.log('Service Worker registered:', reg))
-          .catch(err => console.error('Service Worker registration failed:', err));
-      });
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cognitio+ – Mental Health Service Customization</title>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Customize your personalized mental health plan with Cognitio+. Access affordable therapy, resilience tools, and community programs.">
+  <meta name="keywords" content="mental health, teletherapy, counseling, resilience, OFW, PWD, community wellness">
+  <meta name="author" content="Cognitio+">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://facebook.cognitio-plus.com/">
+  <meta property="og:title" content="Cognitio+ – Mental Health Service Customization">
+  <meta property="og:description" content="Build your personalized mental health plan with Cognitio+.">
+  <meta property="og:image" content="https://cognitio-plus.com/images/og-image.jpg ">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://cognitio-plus.com/ ">
+  <meta name="twitter:title" content="Cognitio+ – Mental Health Service Customization">
+  <meta name="twitter:description" content="Build your personalized mental health plan with Cognitio+.">
+  <meta name="twitter:image" content="https://cognitio-plus.com/images/og-image.jpg ">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org ",
+    "@type": "Organization",
+    "name": "Cognitio+",
+    "url": "https://cognitio-plus.com ",
+    "logo": "https://cognitio-plus.com/images/logo.png ",
+    "description": "A platform for customizing mental health and resilience services for individuals, communities, and organizations.",
+    "sameAs": [
+      "https://www.facebook.com/cognitio.plus ",
+      "https://www.instagram.com/cognitio.plus "
+    ]
+  }
   </script>
+
+  <!-- Lottie Player -->
+  <script src="https://unpkg.com/ @lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <!-- Styles -->
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: #4a90e2;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .hero {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .service-category {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .service-category h3 {
+      margin-top: 0;
+      font-size: 1.25rem;
+    }
+
+    .services {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .service {
+      padding: 1rem;
+      border-left: 4px solid #4a90e2;
+      background: #f1f9ff;
+    }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+    }
+
+    .fab {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+
+    @media (min-width: 768px) {
+      .services {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .service {
+        flex: 1 1 45%;
+      }
+    }
+  </style>
 </head>
+
 <body>
+
   <header>
-    <a href="index.html" class="logo" aria-label="Cognitio+ Home">
-      <img src="icons/icon-192.png" alt="Cognitio+ logo" width="48" height="48">
-      <span class="brand">Cognitio+</span>
-    </a>
-    <!-- Improved Navigation Tabs -->
-    <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
-      <button class="nav-toggle" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="fa fa-bars" aria-hidden="true"></span>
-      </button>
-      <ul>
-        <li><a href="index.html"><span class="fa fa-home" aria-hidden="true"></span> <span>Home</span></a></li>
-        <li><a href="solutions.html"><span class="fa fa-brain" aria-hidden="true"></span> <span>Solutions</span></a></li>
-        <li><a href="services.html"><span class="fa fa-hand-holding-heart" aria-hidden="true"></span> <span>Services</span></a></li>
-        <li><a href="booking.html"><span class="fa fa-calendar" aria-hidden="true"></span> <span>Book Appointment</span></a></li>
-        <li><a href="resources.html"><span class="fa fa-book" aria-hidden="true"></span> <span>Resources</span></a></li>
-        <li><a href="blog.html"><span class="fa fa-blog" aria-hidden="true"></span> <span>Blog</span></a></li>
-        <li><a href="store.html"><span class="fa fa-store" aria-hidden="true"></span> <span>Store</span></a></li>
-        <li><a href="faq.html"><span class="fa fa-question-circle" aria-hidden="true"></span> <span>FAQ</span></a></li>
-        <li><a href="support.html"><span class="fa fa-life-ring" aria-hidden="true"></span> <span>Support</span></a></li>
-        <li><a href="about.html"><span class="fa fa-users" aria-hidden="true"></span> <span>About</span></a></li>
-        <li><a href="contact.html"><span class="fa fa-envelope" aria-hidden="true"></span> <span>Contact Us</span></a></li>
-        <li><a href="policies.html"><span class="fa fa-file-contract" aria-hidden="true"></span> <span>Policies</span></a></li>
-        <li><a href="login.html"><span class="fa fa-user" aria-hidden="true"></span> <span>Login/Signup</span></a></li>
-      </ul>
-    </nav>
+    <h1>Cognitio+</h1>
+    <p>Customize your personalized mental health and resilience plan</p>
   </header>
-  <main id="main-content" tabindex="-1">
+
+  <div class="container">
     <section class="hero">
-      <h1>Welcome to Cognitio+</h1>
-      <p>Innovative solutions for wellbeing and technology. Explore our services and resources!</p>
-      <a href="booking.html" class="cta">Book Appointment</a>
+      <lottie-player 
+        src="/animations/mental-health.json" 
+        background="transparent" 
+        speed="1" 
+        style="width: 100%; max-height: 400px;" 
+        loop 
+        autoplay>
+      </lottie-player>
     </section>
-    <section class="features">
-      <h2>Our Features</h2>
-      <div class="feature-list">
-        <article>
-          <span class="fa fa-brain fa-2x" aria-hidden="true"></span>
-          <h3>AI-Driven Solutions</h3>
-          <p>Harness the power of artificial intelligence for mental wellbeing and productivity.</p>
-        </article>
-        <article>
-          <span class="fa fa-hand-holding-heart fa-2x" aria-hidden="true"></span>
-          <h3>Personalized Services</h3>
-          <p>Tailored support for individuals, teams, and organizations.</p>
-        </article>
-        <article>
-          <span class="fa fa-book fa-2x" aria-hidden="true"></span>
-          <h3>Learning Resources</h3>
-          <p>Access guides, articles, and interactive resources anytime.</p>
-        </article>
-      </div>
+
+    <section>
+      <div class="section">
+        <h2>Explore Service Categories</h2>
+        <div class="category">
+            <button class="button" onclick="toggleVisibility('online_individual')">Online and Individual Solutions</button>
+            <div id="online_individual" class="sub-services hidden">
+                <ul>
+                    <li>AI-Powered Mental Health Assessments</li>
+                    <li>Teletherapy and E-Counseling Services</li>
+                    <li>Self-Help Resources and Psychoeducation</li>
+                    <li>Gamified Learning Modules</li>
+                </ul>
+            </div>
+        </div>
+        <div class="category">
+            <button class="button" onclick="toggleVisibility('digital_ai')">Digital AI Resilience Tools</button>
+            <div id="digital_ai" class="sub-services hidden">
+                <ul>
+                    <li>Resilience Navigator</li>
+                    <li>Smart Emotional Tracker and Journal</li>
+                    <li>Resilient Behavior Designer</li>
+                    <li>Oasis: Mindfulness Sanctuary</li>
+                    <li>Well-Be: Stress Manager App</li>
+                </ul>
+            </div>
+        </div>
+        <div class="category">
+            <button class="button" onclick="toggleVisibility('community_mental')">Community-Based Mental Health Programs</button>
+            <div id="community_mental" class="sub-services hidden">
+                <ul>
+                    <li>Caring for the Carers (C4C)</li>
+                    <li>CareTalk Circles</li>
+                    <li>Indigenous Mental Wellness Dialogues</li>
+                    <li>Substance Abuse Prevention and Recovery Support</li>
+                </ul>
+            </div>
+        </div>
+        <div class="category">
+            <button class="button" onclick="toggleVisibility('community_resilience')">Community Resilience Program</button>
+            <div id="community_resilience" class="hidden sub-services">
+                <ul>
+                    <li>Katatagan Framework Workshops</li>
+                    <li>Peer-Led Support Group Models</li>
+                    <li>Trauma-Informed Care and PFA Training</li>
+                </ul>
+            </div>
+        </div>
+        <div class="category">
+            <button class="button" onclick="toggleVisibility('org_training')">Organizational Trainings and Consultancy</button>
+            <div id="org_training" class="hidden sub-services">
+                <ul>
+                    <li>Psychological First Aid Certification</li>
+                    <li>Mental Health First Response</li>
+                    <li>MHPSS Integration into Health Plans</li>
+                    <li>Mental Health Policy Co-Design</li>
+                    <li>Case Management and Referral Systems</li>
+                    <li>Cultural Competence Training</li>
+                    <li>Burnout Prevention Workshops</li>
+                </ul>
+            </div>
+        </div>
+        <div class="category">
+            <button class="button" onclick="toggleVisibility('research_data')">Research and Data Analytics Services</button>
+            <div id="research_data" class="hidden sub-services">
+                <ul>
+                    <li>Data Collection and Monitoring</li>
+                    <li>Psychosocial Risk Mapping</li>
+                    <li>Behavioral Segmentation</li>
+                    <li>Impact Assessment</li>
+                    <li>Ethical AI Dashboards</li>
+                </ul>
+            </div>
+        </div>
+        <div class="category">
+            <button class="button" onclick="toggleVisibility('policy_advisory')">Policy and Strategic Advisory Services</button>
+            <div id="policy_advisory" class="hidden sub-services">
+                <ul>
+                    <li>Mental Health Systems Audits</li>
+                    <li>Data-Driven Planning and Budgeting</li>
+                    <li>Policy Co-Design and Implementation</li>
+                    <li>Cognitio+ Insights Dashboard</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     </section>
-    <section class="updates">
-      <h2>Latest Updates</h2>
-      <ul>
-        <li><time datetime="2025-07-13">July 13, 2025</time> — New blog post: <a href="blog.html#latest">How AI is Changing Wellbeing</a></li>
-        <li><time datetime="2025-07-01">July 1, 2025</time> — Store launch: <a href="store.html">Shop Now</a></li>
-      </ul>
+
+    <section>
+      <h2 class="section-title">Next Steps</h2>
+      <p><a href="#">Start your customization journey</a> or <a href="#">learn more about our pricing</a>.</p>
     </section>
-  </main>
+  </div>
+
   <footer>
-    <nav aria-label="Footer navigation">
-      <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="policies.html">Policies</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="support.html">Support</a></li>
-      </ul>
-    </nav>
     <p>&copy; 2025 Cognitio+. All rights reserved.</p>
   </footer>
-  <!-- Responsive Navigation Script -->
-  <script>
-    const navToggle = document.querySelector('.nav-toggle');
-    const mainNav = document.querySelector('.main-nav ul');
-    navToggle.addEventListener('click', function() {
-      const expanded = navToggle.getAttribute("aria-expanded") === "true";
-      navToggle.setAttribute("aria-expanded", !expanded);
-      mainNav.classList.toggle('open');
-    });
-  </script>
+
+  <!-- Floating Action Button -->
+  <button class="fab" title="Build Your Plan" onclick="window.location.href='plan-builder.html'">+</button>
 </body>
 </html>
