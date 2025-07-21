@@ -1,0 +1,52 @@
+[
+  {
+    "id": "svc_001",
+    "name": "AI-Powered Mental Health Assessment",
+    "description": "Get insights into your emotional well-being through smart assessments.",
+    "category": "Online & Individual Solutions",
+    "tier": "Free",
+    "price": 0,
+    "duration": "Self-paced",
+    "audience": ["Individual", "Caregiver", "OFW"]
+  },
+  {
+    "id": "svc_002",
+    "name": "Teletherapy and E-Counseling",
+    "description": "Connect with licensed professionals from the comfort of your home.",
+    "category": "Online & Individual Solutions",
+    "tier": "Premium",
+    "price": 800,
+    "duration": "45 mins",
+    "audience": ["Individual", "Caregiver"]
+  },
+  {
+    "id": "svc_003",
+    "name": "Resilience Navigator",
+    "description": "Interactive tool to guide you through emotional resilience building.",
+    "category": "Digital AI Resilience Tools",
+    "tier": "Affordable",
+    "price": 350,
+    "duration": "Self-paced",
+    "audience": ["Individual", "OFW", "Community Leader"]
+  },
+  {
+    "id": "svc_004",
+    "name": "CareTalk Circles",
+    "description": "Community-led peer support groups for mental wellness.",
+    "category": "Community-Based Mental Health Programs",
+    "tier": "Free",
+    "price": 0,
+    "duration": "1 hour",
+    "audience": ["Community Leader", "LGU", "School"]
+  },
+  {
+    "id": "svc_005",
+    "name": "Caring for the Carers (C4C)",
+    "description": "Support programs for caregivers and frontline workers.",
+    "category": "Community-Based Mental Health Programs",
+    "tier": "Affordable",
+    "price": 200,
+    "duration": "1 hour",
+    "audience": ["Caregiver", "LGU"]
+  }
+]
