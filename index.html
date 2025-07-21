@@ -57,14 +57,14 @@
   <!-- Styles -->
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Montseratt classic', sans-serif;
       margin: 0;
       background: #f9f9f9;
       color: #333;
     }
 
     header {
-      background: #4a90e2;
+      background: #4a90e2; 
       color: white;
       padding: 2rem 1rem;
       text-align: center;
@@ -145,6 +145,62 @@
       }
     }
   </style>
+
+  <!-- ✅ HEAD Section (place in <head>) -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald&display=swap">
+<style>
+  .navbar {
+    background-color: #333;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .navbar a {
+    color: white;
+    margin: 0.5rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  .navbar a:hover {
+    color: #f3e329;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      margin-top: 0.5rem;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .hamburger {
+      display: block;
+    }
+  }
+</style>
+
 </head>
 
 <body>
@@ -153,6 +209,7 @@
     <h1>Cognitio+</h1>
     <p>Customize your personalized mental health and resilience plan</p>
   </header>
+  
 
   <div class="container">
     <section class="hero">
@@ -165,7 +222,16 @@
         autoplay>
       </lottie-player>
     </section>
-
+    <section>
+    <div style="position: relative; width: 100%; height: 0; padding-top: 50.0000%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAGl_BflMac/VYUR_nkOQI1Cqerx5W_lCQ/view?embed"
+  </iframe>
+</div>
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGl_BflMac&#x2F;VYUR_nkOQI1Cqerx5W_lCQ&#x2F;view?utm_content=DAGl_BflMac&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a>
+  </section>
     <section>
       <div class="section">
         <h2>Explore Service Categories</h2>
@@ -173,15 +239,15 @@
             <button class="button" onclick="toggleVisibility('online_individual')">Online and Individual Solutions</button>
             <div id="online_individual" class="sub-services hidden">
                 <ul>
-                    <li>AI-Powered Mental Health Assessments</li>
+                    <li>AI-Powered Mental Health Digital Solutions and Tools </li>
                     <li>Teletherapy and E-Counseling Services</li>
-                    <li>Self-Help Resources and Psychoeducation</li>
+                    <li>Resilience Kits and Psychoeducation</li>
                     <li>Gamified Learning Modules</li>
                 </ul>
             </div>
         </div>
         <div class="category">
-            <button class="button" onclick="toggleVisibility('digital_ai')">Digital AI Resilience Tools</button>
+            <button class="button" onclick="toggleVisibility('digital_ai')">Digital AI-Powered Resilience Tools</button>
             <div id="digital_ai" class="sub-services hidden">
                 <ul>
                     <li>Resilience Navigator</li>
@@ -256,13 +322,9 @@
 
     <section>
       <h2 class="section-title">Next Steps</h2>
-      <p><a href="#">Start your customization journey</a> or <a href="#">learn more about our pricing</a>.</p>
+      <p><a href="#plan.builder.html">Start your customization journey</a> or <a href="Pricing">Our Pricing</a>.</p>
     </section>
   </div>
-
-  <footer>
-    <p>&copy; 2025 Cognitio+. All rights reserved.</p>
-  </footer>
 
   <!-- Floating Action Button -->
   <button class="fab" title="Build Your Plan" onclick="window.location.href='plan-builder.html'">+</button>
