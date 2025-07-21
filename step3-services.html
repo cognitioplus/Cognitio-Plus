@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Step 3: Select Services</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; background: #f5f5f5; }
+    .card { background: white; padding: 1.5rem; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    button { background: #4a90e2; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; cursor: pointer; }
+    .back-btn { background: #ccc; color: #333; margin-right: 1rem; }
+    .fab { position: fixed; bottom: 20px; right: 20px; background: #4a90e2; color: white; border: none; border-radius: 50%; width: 60px; height: 60px; font-size: 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+  </style>
+</head>
+<body>
+
+  <h1>Step 3: Select Services</h1>
+
+  <div class="card">
+    <label><input type="checkbox" name="service" value="assessment"> AI-Powered Assessment</label>
+  </div>
+  <div class="card">
+    <label><input type="checkbox" name="service" value="teletherapy"> Teletherapy Session</label>
+  </div>
+  <div class="card">
+    <label><input type="checkbox" name="service" value="resilience"> Resilience Navigator</label>
+  </div>
+  <div class="card">
+    <label><input type="checkbox" name="service" value="caretalk"> CareTalk Circles</label>
+  </div>
+
+  <button class="back-btn" onclick="window.location.href='step2-goals.html'">Back</button>
+  <button onclick="nextStep()">Next</button>
+
+  <button class="fab" onclick="window.location.href='step4-summary.html'">+</button>
+
+  <script>
+    function nextStep() {
+      const services = Array.from(document.querySelectorAll('input[name="service"]:checked')).map(cb => cb.value);
+      if (services.length > 0) {
+        localStorage.setItem('services', JSON.stringify(services));
+        window.location.href = 'step4-summary.html';
+      } else {
+        alert('Please select at least one service.');
+      }
+    }
+  </script>
+
+</body>
+</html>
