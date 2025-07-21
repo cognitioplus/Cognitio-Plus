@@ -111,35 +111,12 @@
       background: #f1f9ff;
     }
 
-    .filters {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-bottom: 1rem;
-    }
-
-    .filters select {
-      padding: 0.5rem;
-    }
-
-    .service {
-      background: white;
-      border-radius: 8px;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .service button {
-      background: #4a90e2;
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      cursor: pointer;
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
     }
 
     .fab {
@@ -155,6 +132,9 @@
       font-size: 1.5rem;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     @media (min-width: 768px) {
@@ -163,92 +143,18 @@
         flex-wrap: wrap;
       }
 
-    .plan-summary {
-      margin-top: 2rem;
-      background: #eef6ff;
-      padding: 1rem;
-      border-radius: 8px;
+      .service {
+        flex: 1 1 45%;
+      }
     }
-
-    .plan-summary h3 {
-      margin-top: 0;
-    }
-
-    .summary-item {
-      margin-bottom: 0.5rem;
-    }
-
-    .compare-section {
-      margin-top: 2rem;
-    }
-
-    .compare-section h3 {
-      margin-bottom: 1rem;
-    }
-
-    .compare-cards {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .compare-card {
-      background: white;
-      padding: 1rem;
-      border-radius: 8px;
-      width: 30%;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    footer {
-      background: #222;
-      color: #ccc;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 3rem;
-    }
-
-    <h1>Cognitio+ – Customize Your Mental Health Plan</h1>
-  </header>
-      <select id="audienceFilter">
-        <option value="">All Audiences</option>
-        <option value="Individual">Individual</option>
-        <option value="Caregiver">Caregiver</option>
-        <option value="OFW">OFW</option>
-        <option value="Community Leader">Community Leader</option>
-        <option value="LGU">LGU</option>
-        <option value="School">School</option>
-      </select>
-    </div>
-
-    <div id="servicesList"></div>
-
-    <div class="plan-summary" id="planSummary">
-      <h3>Your Plan</h3>
-      <ul id="selectedServices"></ul>
-      <p id="totalCost">Total: ₱0</p>
-    </div>
-
-    <div class="compare-section">
-      <h3>Compare Services</h3>
-      <div class="compare-cards" id="compareCards"></div>
-    </div>
-  </div>
-
-  <footer>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="services.json" type="application/json" id="servicesData"></script>
-  <script src="filters/filter.js"></script>
-  <script src="cart/plan-builder.js"></script>
-  <script src="compare/service-comparison.js"></script>
-
-</body>
-</html>
-
+  </style>
 </head>
 <body>
+
+  <header>
+    <h1>Cognitio+</h1>
+    <p>Customize your personalized mental health and resilience plan</p>
+  </header>
 
   <div class="container">
     <section class="hero">
@@ -292,21 +198,7 @@
           </div>
         </div>
       </div>
-<div class="container">
-    <div class="filters">
-      <select id="categoryFilter">
-        <option value="">All Categories</option>
-        <option value="Online & Individual Solutions">Online & Individual</option>
-        <option value="Digital AI Resilience Tools">AI Resilience Tools</option>
-        <option value="Community-Based Mental Health Programs">Community Programs</option>
-      </select>
 
-      <select id="tierFilter">
-        <option value="">All Tiers</option>
-        <option value="Free">Free</option>
-        <option value="Affordable">Affordable</option>
-        <option value="Premium">Premium</option>
-      </select>
       <div class="service-category">
         <h3>🏘️ Community-Based Mental Health Programs</h3>
         <div class="services">
@@ -321,21 +213,91 @@
         </div>
       </div>
 
-      <!-- Add more service categories as needed -->
+      <div class="service-category">
+        <h3>🌱 Community Resilience Program</h3>
+        <div class="services">
+          <div class="service">
+            <strong>Katatagan Framework Workshops</strong>
+            <p>Build trauma-informed resilience in your community.</p>
+          </div>
+          <div class="service">
+            <strong>Peer-Led Support Group Models</strong>
+            <p>Train local leaders to run mental health circles.</p>
+          </div>
+        </div>
+      </div>
 
+      <div class="service-category">
+        <h3>🏢 Organizational Trainings & Consultancy</h3>
+        <div class="services">
+          <div class="service">
+            <strong>Mental Health First Response Training</strong>
+            <p>Equip teams with crisis response skills.</p>
+          </div>
+          <div class="service">
+            <strong>MHPSS Integration into Health Plans</strong>
+            <p>Embed mental health into emergency protocols.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-category">
+        <h3>📊 Research & Data Analytics Services</h3>
+        <div class="services">
+          <div class="service">
+            <strong>Psychosocial Risk Mapping</strong>
+            <p>Identify vulnerable populations using data.</p>
+          </div>
+          <div class="service">
+            <strong>Impact Assessment of Programs</strong>
+            <p>Measure effectiveness and improve outcomes.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-category">
+        <h3>🧭 Policy & Strategic Advisory Services</h3>
+        <div class="services">
+          <div class="service">
+            <strong>Mental Health Systems Audits</strong>
+            <p>Evaluate and strengthen local systems.</p>
+          </div>
+          <div class="service">
+            <strong>Data-Driven Planning & Budgeting</strong>
+            <p>Support LGUs and institutions in policy design.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section>
       <h2 class="section-title">Next Steps</h2>
-      <p><a href="#">Start your customization journey</a> or <a href="#">learn more about our pricing</a>.</p>
+      <p><a href="onboarding/step1-user-type.html">Start your customization journey</a> or <a href="plan-builder.html">build your plan now</a>.</p>
     </section>
   </div>
 
   <footer>
+    <p>&copy; 2025 Cognitio+. All rights reserved.</p>
   </footer>
 
   <!-- Floating Action Button -->
-  <button class="fab" title="Build Your Plan" onclick="window.location.href='plan-builder.html'">+</button>
+  <button class="fab" title="Build Your Plan" onclick="window.location.href='onboarding/step1-user-type.html'">+</button>
+
+  <!-- Onboarding Scripts -->
+  <script>
+    // Optional: Auto-save user progress
+    function saveProgress(step) {
+      localStorage.setItem('onboardingStep', step);
+    }
+
+    // Example: If user returns, redirect to last step
+    window.addEventListener('load', () => {
+      const savedStep = localStorage.getItem('onboardingStep');
+      if (savedStep && !window.location.pathname.includes('step')) {
+        console.log(`Resume onboarding at ${savedStep}`);
+      }
+    });
+  </script>
 
 </body>
 </html>
