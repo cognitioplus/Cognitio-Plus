@@ -3,149 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cognitio+ – Mental Health Service Customization</title>
+  <title>Cognitio+ – Customize Your Mental Health Plan</title>
 
-  <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/favicon/site.webmanifest">
-  <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="shortcut icon" href="/favicon/favicon.ico">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="msapplication-config" content="/favicon/browserconfig.xml">
-  <meta name="theme-color" content="#ffffff">
-
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Customize your personalized mental health plan with Cognitio+. Access affordable therapy, resilience tools, and community programs.">
-  <meta name="keywords" content="mental health, teletherapy, counseling, resilience, OFW, PWD, community wellness">
-  <meta name="author" content="Cognitio+">
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://cognitio-plus.com/ ">
-  <meta property="og:title" content="Cognitio+ – Mental Health Service Customization">
-  <meta property="og:description" content="Build your personalized mental health plan with Cognitio+.">
-  <meta property="og:image" content="https://cognitio-plus.com/images/og-image.jpg ">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://cognitio-plus.com/ ">
-  <meta name="twitter:title" content="Cognitio+ – Mental Health Service Customization">
-  <meta name="twitter:description" content="Build your personalized mental health plan with Cognitio+.">
-  <meta name="twitter:image" content="https://cognitio-plus.com/images/og-image.jpg ">
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org ",
-    "@type": "Organization",
-    "name": "Cognitio+",
-    "url": "https://cognitio-plus.com ",
-    "logo": "https://cognitio-plus.com/images/logo.png ",
-    "description": "A platform for customizing mental health and resilience services for individuals, communities, and organizations.",
-    "sameAs": [
-      "https://www.facebook.com/cognitio.plus ",
-      "https://www.instagram.com/cognitio.plus "
-    ]
-  }
-  </script>
+  <!-- Favicon & SEO -->
+  <link rel="icon" href="/favicon/favicon-32x32.png" type="image/png">
+  <meta name="description" content="Customize your mental health plan with Cognitio+. Access therapy, resilience tools, and community programs.">
 
   <!-- Lottie Player -->
   <script src="https://unpkg.com/ @lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
   <!-- Styles -->
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background: #f9f9f9;
-      color: #333;
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f9f9f9; color: #333; }
+    header { background: #4a90e2; color: white; padding: 2rem; text-align: center; }
+    .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+
+    /* Filters */
+    .filters { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .filters select { padding: 0.5rem; border-radius: 4px; border: 1px solid #ccc; }
+
+    /* Services List */
+    .services-grid { display: grid; gap: 1rem; margin-top: 1rem; }
+    @media (min-width: 768px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
-    header {
-      background: #4a90e2;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-
-    .hero {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    .section-title {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .service-category {
+    .service-card {
       background: white;
       border-radius: 8px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-
-    .service-category h3 {
-      margin-top: 0;
-      font-size: 1.25rem;
-    }
-
-    .services {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .service {
       padding: 1rem;
-      border-left: 4px solid #4a90e2;
-      background: #f1f9ff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .service-card button {
+      background: #4a90e2; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;
+    }
+
+    /* Plan Summary */
+    .plan-summary {
+      margin-top: 2rem;
+      background: #eef6ff;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .summary-item { margin-bottom: 0.5rem; }
+
+    /* Comparison Section */
+    .compare-section { margin-top: 2rem; }
+    .compare-cards {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      padding-bottom: 1rem;
+    }
+    .compare-card {
+      background: white;
+      padding: 1rem;
+      min-width: 250px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     footer {
-      background: #222;
-      color: #ccc;
-      text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 3rem;
+      background: #222; color: #ccc; text-align: center; padding: 2rem 1rem; margin-top: 3rem;
     }
 
     .fab {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #4a90e2;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      font-size: 1.5rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    @media (min-width: 768px) {
-      .services {
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
-
-      .service {
-        flex: 1 1 45%;
-      }
+      position: fixed; bottom: 20px; right: 20px;
+      background: #4a90e2; color: white; border: none;
+      width: 60px; height: 60px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2); cursor: pointer;
     }
   </style>
 </head>
@@ -153,155 +84,194 @@
 
   <header>
     <h1>Cognitio+</h1>
-    <p>Customize your personalized mental health and resilience plan</p>
+    <p>Build Your Personalized Mental Health & Resilience Plan</p>
   </header>
 
   <div class="container">
-    <section class="hero">
-      <lottie-player 
-        src="/animations/mental-health.json" 
-        background="transparent" 
-        speed="1" 
-        style="width: 100%; max-height: 400px;" 
-        loop 
-        autoplay>
-      </lottie-player>
-    </section>
+    <!-- Filters -->
+    <div class="filters">
+      <select id="categoryFilter">
+        <option value="">All Categories</option>
+        <option value="Online & Individual Solutions">Individual Support</option>
+        <option value="Digital AI Resilience Tools">AI Resilience Tools</option>
+        <option value="Community-Based Mental Health Programs">Community Programs</option>
+        <option value="Organizational Trainings & Consultancy">Training & Policy</option>
+      </select>
 
-    <section>
-      <h2 class="section-title">Explore Services</h2>
+      <select id="tierFilter">
+        <option value="">All Tiers</option>
+        <option value="Free">Free</option>
+        <option value="Affordable">Affordable</option>
+        <option value="Premium">Premium</option>
+      </select>
+    </div>
 
-      <div class="service-category">
-        <h3>🧠 Online & Individual Solutions</h3>
-        <div class="services">
-          <div class="service">
-            <strong>AI-Powered Mental Health Assessments</strong>
-            <p>Get insights into your emotional well-being through smart assessments.</p>
-          </div>
-          <div class="service">
-            <strong>Teletherapy and E-Counseling Services</strong>
-            <p>Connect with licensed professionals from the comfort of your home.</p>
-          </div>
-        </div>
-      </div>
+    <!-- Services Grid -->
+    <div class="services-grid" id="servicesList"></div>
 
-      <div class="service-category">
-        <h3>🤖 Digital AI Resilience Tools</h3>
-        <div class="services">
-          <div class="service">
-            <strong>Resilience Navigator</strong>
-            <p>Interactive tool to guide you through emotional resilience building.</p>
-          </div>
-          <div class="service">
-            <strong>SMART Emotional Tracker</strong>
-            <p>Track and manage your emotions with AI-powered insights.</p>
-          </div>
-        </div>
-      </div>
+    <!-- Plan Summary -->
+    <div class="plan-summary" id="planSummary">
+      <h3>Your Plan</h3>
+      <ul id="selectedServices"></ul>
+      <p id="totalCost">Total: ₱0</p>
+    </div>
 
-      <div class="service-category">
-        <h3>🏘️ Community-Based Mental Health Programs</h3>
-        <div class="services">
-          <div class="service">
-            <strong>Caring for the Carers (C4C)</strong>
-            <p>Support programs for caregivers and frontline workers.</p>
-          </div>
-          <div class="service">
-            <strong>CareTalk Circles</strong>
-            <p>Community-led peer support groups for mental wellness.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="service-category">
-        <h3>🌱 Community Resilience Program</h3>
-        <div class="services">
-          <div class="service">
-            <strong>Katatagan Framework Workshops</strong>
-            <p>Build trauma-informed resilience in your community.</p>
-          </div>
-          <div class="service">
-            <strong>Peer-Led Support Group Models</strong>
-            <p>Train local leaders to run mental health circles.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="service-category">
-        <h3>🏢 Organizational Trainings & Consultancy</h3>
-        <div class="services">
-          <div class="service">
-            <strong>Mental Health First Response Training</strong>
-            <p>Equip teams with crisis response skills.</p>
-          </div>
-          <div class="service">
-            <strong>MHPSS Integration into Health Plans</strong>
-            <p>Embed mental health into emergency protocols.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="service-category">
-        <h3>📊 Research & Data Analytics Services</h3>
-        <div class="services">
-          <div class="service">
-            <strong>Psychosocial Risk Mapping</strong>
-            <p>Identify vulnerable populations using data.</p>
-          </div>
-          <div class="service">
-            <strong>Impact Assessment of Programs</strong>
-            <p>Measure effectiveness and improve outcomes.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="service-category">
-        <h3>🧭 Policy & Strategic Advisory Services</h3>
-        <div class="services">
-          <div class="service">
-            <strong>Mental Health Systems Audits</strong>
-            <p>Evaluate and strengthen local systems.</p>
-          </div>
-          <div class="service">
-            <strong>Data-Driven Planning & Budgeting</strong>
-            <p>Support LGUs and institutions in policy design.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2 class="section-title">Next Steps</h2>
-      <p><a href="onboarding/step1-user-type.html">Start your customization journey</a> or <a href="plan-builder.html">build your plan now</a>.</p>
-    </section>
+    <!-- Compare Section -->
+    <div class="compare-section">
+      <h3>Compare Services</h3>
+      <div class="compare-cards" id="compareCards"></div>
+    </div>
   </div>
 
   <footer>
+    <p>&copy; 2025 Cognitio+. All rights reserved.</p>
   </footer>
 
-  <div class="plan-summary" id="planSummary">
-  <h3>Your Plan</h3>
-  <ul id="selectedServices"></ul>
-  <p id="totalCost">Total: ₱0</p>
-  <p id="discountInfo">No discounts applied</p>
-</div>
-  <!-- Floating Action Button -->
-  <button class="fab" title="Build Your Plan" onclick="window.location.href='onboarding/step1-user-type.html'">+</button>
+  <button class="fab" onclick="document.getElementById('planSummary').scrollIntoView()">📋</button>
 
-  <!-- Onboarding Scripts -->
+  <!-- Scripts -->
+  <script id="servicesData" type="application/json">
+[
+  {
+    "id": "svc_001",
+    "name": "AI-Powered Mental Health Assessment",
+    "description": "Smart self-assessment tools for emotional wellness.",
+    "category": "Online & Individual Solutions",
+    "tier": "Free",
+    "price": 0,
+    "audience": ["Individual", "OFW"]
+  },
+  {
+    "id": "svc_002",
+    "name": "Teletherapy Session",
+    "description": "One-on-one counseling with licensed professionals.",
+    "category": "Online & Individual Solutions",
+    "tier": "Premium",
+    "price": 800,
+    "audience": ["Individual", "Caregiver"]
+  },
+  {
+    "id": "svc_003",
+    "name": "Resilience Navigator",
+    "description": "Interactive tool to build emotional strength.",
+    "category": "Digital AI Resilience Tools",
+    "tier": "Affordable",
+    "price": 350,
+    "audience": ["Individual", "OFW", "Student"]
+  },
+  {
+    "id": "svc_004",
+    "name": "CareTalk Circles",
+    "description": "Peer-led support groups for shared healing.",
+    "category": "Community-Based Mental Health Programs",
+    "tier": "Free",
+    "price": 0,
+    "audience": ["Community Leader", "LGU"]
+  }
+]
+  </script>
+
   <script>
-    // Optional: Auto-save user progress
-    function saveProgress(step) {
-      localStorage.setItem('onboardingStep', step);
+    // Load services from JSON
+    const services = JSON.parse(document.getElementById('servicesData').textContent);
+
+    // DOM Elements
+    const servicesList = document.getElementById('servicesList');
+    const selectedServicesEl = document.getElementById('selectedServices');
+    const totalCostEl = document.getElementById('totalCost');
+    const compareCards = document.getElementById('compareCards');
+
+    let selectedPlan = [];
+    let compareList = [];
+
+    // Render Services
+    function renderServices(filteredServices) {
+      servicesList.innerHTML = '';
+      filteredServices.forEach(service => {
+        const div = document.createElement('div');
+        div.className = 'service-card';
+        div.innerHTML = `
+          <div>
+            <strong>${service.name}</strong><br>
+            <small>${service.description}</small><br>
+            <em>Tier: ${service.tier} | Price: ₱${service.price}</em>
+          </div>
+          <div>
+            <button onclick="addToPlan(${service.id})">Add to Plan</button>
+            <button onclick="addToCompare(${service.id})">Compare</button>
+          </div>
+        `;
+        servicesList.appendChild(div);
+      });
     }
 
-    // Example: If user returns, redirect to last step
-    window.addEventListener('load', () => {
-      const savedStep = localStorage.getItem('onboardingStep');
-      if (savedStep && !window.location.pathname.includes('step')) {
-        console.log(`Resume onboarding at ${savedStep}`);
+    // Filter Services
+    function filterServices() {
+      const category = document.getElementById('categoryFilter').value;
+      const tier = document.getElementById('tierFilter').value;
+
+      let filtered = services;
+
+      if (category) filtered = filtered.filter(s => s.category === category);
+      if (tier) filtered = filtered.filter(s => s.tier === tier);
+
+      renderServices(filtered);
+    }
+
+    // Add to Plan
+    window.addToPlan = function(id) {
+      const service = services.find(s => s.id === id);
+      if (!selectedPlan.find(s => s.id === id)) {
+        selectedPlan.push(service);
+        updatePlan();
       }
-    });
+    };
+
+    // Update Plan Display
+    function updatePlan() {
+      selectedServicesEl.innerHTML = '';
+      let total = 0;
+
+      selectedPlan.forEach(service => {
+        const li = document.createElement('li');
+        li.className = 'summary-item';
+        li.textContent = `${service.name} – ₱${service.price}`;
+        selectedServicesEl.appendChild(li);
+        total += service.price;
+      });
+
+      totalCostEl.textContent = `Total: ₱${total}`;
+    }
+
+    // Add to Compare
+    window.addToCompare = function(id) {
+      const service = services.find(s => s.id === id);
+      if (!compareList.find(s => s.id === id)) {
+        compareList.push(service);
+        renderComparison();
+      }
+    };
+
+    // Render Comparison Cards
+    function renderComparison() {
+      compareCards.innerHTML = '';
+      compareList.forEach(service => {
+        const card = document.createElement('div');
+        card.className = 'compare-card';
+        card.innerHTML = `
+          <h4>${service.name}</h4>
+          <p><strong>Tier:</strong> ${service.tier}</p>
+          <p><strong>Price:</strong> ₱${service.price}</p>
+          <p><strong>Audience:</strong> ${service.audience.join(', ')}</p>
+        `;
+        compareCards.appendChild(card);
+      });
+    }
+
+    // Initialize
+    document.getElementById('categoryFilter').addEventListener('change', filterServices);
+    document.getElementById('tierFilter').addEventListener('change', filterServices);
+    renderServices(services);
   </script>
 
 </body>
