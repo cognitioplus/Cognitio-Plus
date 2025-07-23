@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cognitio+ Service Builder</title>
+  <meta name="description" content="Build and customize your mental health service plan with Cognitio+">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="../src/style.css">
+</head>
+<body>
+  <main>
+    <h1>Cognitio+ Service Builder</h1>
+
+    <!-- Step 1: User Identification -->
+    <section id="step-1">
+      <h2>Who are you?</h2>
+      <select id="userType"><option value="">--Select--</option>
+        <option>Individual</option><option>LGU</option><option>Government</option><option>School/University</option><option>NGO</option>
+      </select>
+    </section>
+
+    <!-- Step 2: Goals -->
+    <section id="step-2">
+      <h2>What are your goals?</h2>
+      <label><input type="checkbox" value="Personalized Care"> Personalized Care</label>
+      <label><input type="checkbox" value="Cultural Sensitivity"> Cultural Sensitivity</label>
+      <label><input type="checkbox" value="Affordability & Access"> Affordability & Access</label>
+      <label><input type="checkbox" value="Platform Integration"> Integration</label>
+      <label><input type="checkbox" value="Stigma Reduction"> Stigma Reduction</label>
+    </section>
+
+    <!-- Step 3: Services -->
+    <section id="step-3">
+      <h2>Select Services</h2>
+      <details><summary>🧠 Online & Individual</summary>
+        <label><input type="checkbox" value="AI Assessment"> AI-Powered Assessments</label>
+        <label><input type="checkbox" value="Teletherapy"> Teletherapy & E‑Counseling</label>
+        <label><input type="checkbox" value="Self‑Help"> Psychoeducation</label>
+        <label><input type="checkbox" value="Gamified Modules"> Gamified Learning</label>
+      </details>
+      <details><summary>🤖 Digital AI Tools</summary>
+        <label><input type="checkbox" value="Resilience Navigator"> Resilience Navigator</label>
+        <label><input type="checkbox" value="Emotional Tracker"> SMART Emotional Tracker</label>
+        <label><input type="checkbox" value="Behavior Designer"> Resilient Behavior Designer</label>
+        <label><input type="checkbox" value="Mindfulness"> Oasis</label>
+        <label><input type="checkbox" value="Stress Manager"> Well‑Be App</label>
+      </details>
+      <!-- Additional categories truncated for brevity -->
+    </section>
+
+    <!-- Step 4: Vulnerability & Context -->
+    <section id="step-4">
+      <h2>Inputs for discounts/supports</h2>
+      <select id="segment">
+        <option value="">Segment</option>
+        <option value="lowIncome">Low‑Income</option>
+        <option value="indigenous">Indigenous</option>
+        <option value="pwds">PWDs</option>
+        <option value="youth">Youth</option>
+      </select>
+      <label><input type="checkbox" id="urban"> Highly Urbanized City (+15%)</label>
+      <label><input type="checkbox" id="hasFunder"> Has External Funder (+10%)</label>
+    </section>
+
+    <!-- Step 5: Engagement -->
+    <section id="step-5">
+      <h2>Engagement Tracker</h2>
+      <button id="engageBtn">Simulate Engagement</button>
+      <p>Engagements: <span id="engageCount">0</span></p>
+      <p>Badges: <span id="badgeCount">0</span></p>
+      <p>Level: <span id="engageLevel">Beginner</span></p>
+    </section>
+
+    <!-- Step 6: Pricing & Summary -->
+    <section id="step-6">
+      <h2>Pricing Estimate</h2>
+      <p>Cost: ₱<span id="price">0.00</span></p>
+      <p id="collabSuggestion"></p>
+
+      <button id="proceed">Proceed to Booking</button>
+    </section>
+  </main>
+
+  <script src="../src/script.js"></script>
+</body>
+</html>
