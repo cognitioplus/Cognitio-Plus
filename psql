@@ -1,0 +1,15 @@
+cognitio-service-builder/
+├── public/
+│   ├── index.html
+│   ├── manifest.json
+│   ├── icons/
+│       ├── icon-192.png
+│       └── icon-512.png
+├── src/
+│   ├── style.css
+│   ├── script.js
+│   └── portal.html
+├── backend/
+│   ├── server.js
+│   └── package.json
+└── README.md
