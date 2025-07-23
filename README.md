@@ -1,34 +1,21 @@
-# Cognitio+
+# Cognitio+ Service Builder (PWA)
 
-🧠 A mental health service customization platform designed to help individuals, communities, and organizations build personalized mental health and resilience plans.
+An interactive mental health and resilience service customization platform.
 
-## 🧩 Forks
+## 📁 Structure
 
-This project is organized using the **Simeon Fork Method**, with each fork focusing on a specific theme:
+- `public/` — Static site content (deployed to GitHub Pages)
+- `src/` — UI development files (JS/CSS/HTML)
+- `backend/` — Express server for sync, email, and data logic
 
-1. **Fork 1: Branding & Visual Identity** – Favicon, SEO, and hero animation
-2. **Fork 2: Navigation & User Flow** – Onboarding, back buttons, and mobile FAB
-3. **Fork 3: Functionality & Interactivity** – Filters, cart, and service comparison
-4. **Fork 4: Gamification & Engagement** – Badges, streaks, rewards
-5. **Fork 5: Pricing & Customization Engine** – Dynamic pricing, discounts, surcharges
-6. **Fork 6: Accessibility & Localization** – Multilingual support, screen reader compatibility
-7. **Fork 7: Mobile App Enhancements** – PWA installability, offline support
-8. **Fork Final: Integration & Testing** – Full build and deployment
+## 🚀 Deployment
 
-## 📦 Technologies Used
+- **Frontend**: GitHub Pages
+- **Backend**: Heroku/Railway/Render
 
-- HTML, CSS, JavaScript
-- Lottie for animations
-- Google Sheets (lightweight backend)
-- Appimize (low-code mobile app builder)
-- GitHub (version control)
-- Heroku (optional backend)
-- Firebase (optional real-time data)
+## 🧩 Features
 
-## 🚀 Contributing
-
-Contributions are welcome! Please read our [CONTRIBUTING.md](CONTRIBUTING.md) to get started.
-
-## 📄 License
-
-MIT License – see [LICENSE](LICENSE) for details.
+- PWA installable with service worker
+- Gamified engagement tracker
+- Service comparison and pricing engine
+- Real-time syncing and email API integration
